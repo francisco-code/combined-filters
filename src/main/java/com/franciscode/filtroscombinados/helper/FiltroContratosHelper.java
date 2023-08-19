@@ -19,10 +19,7 @@ public class FiltroContratosHelper {
 
         List<ContratosResponseDTO> responseDTOList = service.getContratos();
 
-        List<ContratosResponseViewModel> responseViewModelList = toViewContratos(requestViewModel, responseDTOList);
 
-
-        return null;
+        return toViewContratos(requestViewModel, responseDTOList);
     }
-
 }
