@@ -31,7 +31,7 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO2.setIdContrato("42443797");
         contratosResponseDTO2.setIndex("SELIC");
         contratosResponseDTO2.setPercentual("40.00");
-        contratosResponseDTO2.setLiberacoes("2");
+        contratosResponseDTO2.setLiberacoes("5");
 
         ContratosResponseDTO contratosResponseDTO3 = new ContratosResponseDTO();
         contratosResponseDTO3.setCpfCnpj("12345898976");
@@ -41,7 +41,7 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO3.setIdContrato("32543797");
         contratosResponseDTO3.setIndex("SELIC");
         contratosResponseDTO3.setPercentual("40.00");
-        contratosResponseDTO3.setLiberacoes("2");
+        contratosResponseDTO3.setLiberacoes("7");
 
         ContratosResponseDTO contratosResponseDTO4 = new ContratosResponseDTO();
         contratosResponseDTO4.setCpfCnpj("05845898976");
@@ -51,13 +51,24 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO4.setIdContrato("32563799");
         contratosResponseDTO4.setIndex("SELIC");
         contratosResponseDTO4.setPercentual("40.00");
-        contratosResponseDTO4.setLiberacoes("2");
+        contratosResponseDTO4.setLiberacoes("8");
+
+        ContratosResponseDTO contratosResponseDTO5 = new ContratosResponseDTO();
+        contratosResponseDTO5.setCpfCnpj("05845898976");
+        contratosResponseDTO5.setDataContratacao("17/12/2015");
+        contratosResponseDTO5.setDataVencimento("31/12/2020");
+        contratosResponseDTO5.setValor(new BigDecimal("10000.0"));
+        contratosResponseDTO5.setIdContrato("32563799");
+        contratosResponseDTO5.setIndex("SELIC");
+        contratosResponseDTO5.setPercentual("40.00");
+        contratosResponseDTO5.setLiberacoes("8");
 
         List<ContratosResponseDTO> responseDTOList = new ArrayList<>();
         responseDTOList.add(contratosResponseDTO1);
         responseDTOList.add(contratosResponseDTO2);
         responseDTOList.add(contratosResponseDTO3);
         responseDTOList.add(contratosResponseDTO4);
+        responseDTOList.add(contratosResponseDTO5);
 
         return responseDTOList;
     }

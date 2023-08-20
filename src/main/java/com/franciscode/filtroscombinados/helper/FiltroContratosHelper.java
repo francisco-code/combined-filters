@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+import static com.franciscode.filtroscombinados.mapper.FiltroContratosMapper.toViewContratos;
+
 @Component
 public class FiltroContratosHelper {
 
@@ -18,7 +20,6 @@ public class FiltroContratosHelper {
     public List<ContratosResponseViewModel> getContratosFiltrados(FiltroContratosRequestViewModel requestViewModel) {
 
         List<ContratosResponseDTO> responseDTOList = service.getContratos();
-
 
         return toViewContratos(requestViewModel, responseDTOList);
     }
