@@ -6,10 +6,10 @@ import com.franciscode.filtroscombinados.viewModel.ContratosResponseViewModel;
 import com.franciscode.filtroscombinados.viewModel.FiltroContratosRequestViewModel;
 import com.franciscode.filtroscombinados.viewModel.LiberacoesViewModel;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,13 +17,16 @@ public class FiltroContratosMapper {
 
     public static List<ContratosResponseViewModel> toViewContratos(FiltroContratosRequestViewModel requestViewModel, List<ContratosResponseDTO> responseDTOList) {
 
+
+
         if (responseDTOList != null) {
             return responseDTOList.stream()
                     .filter(contrato -> (requestViewModel.getCpfCnpj() == null || contrato.getCpfCnpj().equals(requestViewModel.getCpfCnpj())))
                     .filter(contrato -> (requestViewModel.getIdContrato() == null || contrato.getIdContrato().equals(requestViewModel.getIdContrato())))
 
                     .filter(contrato -> (requestViewModel.getDataPeriodoInicio() == null || contrato.getDataContratacao().compareTo(requestViewModel.getDataPeriodoInicio()) >= 0) &&
-                            (requestViewModel.getDataPeriodoFim() == null || contrato.getDataContratacao().compareTo(requestViewModel.getDataPeriodoFim()) <= 0))
+                                    (requestViewModel.getDataPeriodoFim() == null || contrato.getDataContratacao().compareTo(requestViewModel.getDataPeriodoFim()) <= 0))
+
 
                     //.filter(contrato -> (requestViewModel.getDataPeriodoInicio() == null || contrato.getDataContratacao().compareTo(requestViewModel.getDataPeriodoInicio()) >= 0))
                     //.filter(contrato -> (requestViewModel.getDataPeriodoFim() == null || contrato.getDataContratacao().compareTo(requestViewModel.getDataPeriodoFim()) <= 0))
@@ -60,6 +63,12 @@ public class FiltroContratosMapper {
         } else {
             return null;
         }
+    }
+
+    public static Date convertStringToDate(String dateString) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy"); // Define o formato desejado
+        Date date = dateFormat.parse(dateString);
+        return date;
     }
 
 }

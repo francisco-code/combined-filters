@@ -6,8 +6,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 public class FiltroContratosRequestViewModel implements Serializable {
 
