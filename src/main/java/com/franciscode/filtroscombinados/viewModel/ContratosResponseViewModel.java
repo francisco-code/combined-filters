@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 public class ContratosResponseViewModel implements Serializable {
 
@@ -33,7 +34,7 @@ public class ContratosResponseViewModel implements Serializable {
     private String percentual;
 
     @JsonProperty("liberacoes")
-    private String liberacoes;
+    private List<LiberacoesViewModel> liberacoes;
 
     public String getCpfCnpj() {
         return cpfCnpj;
@@ -91,11 +92,11 @@ public class ContratosResponseViewModel implements Serializable {
         this.percentual = percentual;
     }
 
-    public String getLiberacoes() {
+    public List<LiberacoesViewModel> getLiberacoes() {
         return liberacoes;
     }
 
-    public void setLiberacoes(String liberacoes) {
+    public void setLiberacoes(List<LiberacoesViewModel> liberacoes) {
         this.liberacoes = liberacoes;
     }
 }

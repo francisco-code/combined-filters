@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 public class ContratosResponseDTO implements Serializable {
 
@@ -33,7 +34,7 @@ public class ContratosResponseDTO implements Serializable {
     private String percentual;
 
     @JsonProperty("liberacoes")
-    private String liberacoes;
+    private List<LiberacoesDTO> liberacoes;
 
     public String getCpfCnpj() {
         return cpfCnpj;
@@ -91,11 +92,11 @@ public class ContratosResponseDTO implements Serializable {
         this.percentual = percentual;
     }
 
-    public String getLiberacoes() {
+    public List<LiberacoesDTO> getLiberacoes() {
         return liberacoes;
     }
 
-    public void setLiberacoes(String liberacoes) {
+    public void setLiberacoes(List<LiberacoesDTO> liberacoes) {
         this.liberacoes = liberacoes;
     }
 }

@@ -1,10 +1,13 @@
 package com.franciscode.filtroscombinados.viewModel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 public class FiltroContratosRequestViewModel implements Serializable {
 
@@ -14,18 +17,22 @@ public class FiltroContratosRequestViewModel implements Serializable {
     @JsonProperty("cpf_cnpj")
     private String cpfCnpj;
 
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonProperty("data_periodo_inicio")
     private String dataPeriodoInicio;
 
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonProperty("data_periodo_fim")
     private String dataPeriodoFim;
 
     @JsonProperty("id_contrato")
     private String idContrato;
 
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonProperty("data_vencimento_inicio")
     private String dataVencimentoInicio;
 
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @JsonProperty("data_vencimento_fim")
     private String dataVencimentoFim;
 

@@ -23,4 +23,5 @@ public class FiltroContratosHelper {
 
         return toViewContratos(requestViewModel, responseDTOList);
     }
+
 }

@@ -1,6 +1,7 @@
 package com.franciscode.filtroscombinados.service;
 
 import com.franciscode.filtroscombinados.dtos.ContratosResponseDTO;
+import com.franciscode.filtroscombinados.dtos.LiberacoesDTO;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -21,7 +22,13 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO1.setIdContrato("42343687");
         contratosResponseDTO1.setIndex("SELIC");
         contratosResponseDTO1.setPercentual("40.00");
-        contratosResponseDTO1.setLiberacoes("2");
+        LiberacoesDTO liberacoesDTO1 = new LiberacoesDTO();
+        List<LiberacoesDTO> liberacoesDTOList1 = new ArrayList<>();
+        liberacoesDTO1.setNumeroLiberacao("12345");
+        liberacoesDTO1.setValorLiberacao("5000");
+        liberacoesDTO1.setCoigoLiberacao("8362196");
+        liberacoesDTOList1.add(liberacoesDTO1);
+        contratosResponseDTO1.setLiberacoes(liberacoesDTOList1);
 
         ContratosResponseDTO contratosResponseDTO2 = new ContratosResponseDTO();
         contratosResponseDTO2.setCpfCnpj("12345898976");
@@ -31,7 +38,13 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO2.setIdContrato("42443797");
         contratosResponseDTO2.setIndex("SELIC");
         contratosResponseDTO2.setPercentual("40.00");
-        contratosResponseDTO2.setLiberacoes("5");
+        LiberacoesDTO liberacoesDTO2 = new LiberacoesDTO();
+        List<LiberacoesDTO> liberacoesDTOList2 = new ArrayList<>();
+        liberacoesDTO2.setNumeroLiberacao("12345");
+        liberacoesDTO2.setValorLiberacao("5000");
+        liberacoesDTO2.setCoigoLiberacao("8362196");
+        liberacoesDTOList2.add(liberacoesDTO2);
+        contratosResponseDTO2.setLiberacoes(liberacoesDTOList2);
 
         ContratosResponseDTO contratosResponseDTO3 = new ContratosResponseDTO();
         contratosResponseDTO3.setCpfCnpj("12345898976");
@@ -41,7 +54,13 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO3.setIdContrato("32543797");
         contratosResponseDTO3.setIndex("SELIC");
         contratosResponseDTO3.setPercentual("40.00");
-        contratosResponseDTO3.setLiberacoes("7");
+        LiberacoesDTO liberacoesDTO3 = new LiberacoesDTO();
+        List<LiberacoesDTO> liberacoesDTOList3 = new ArrayList<>();
+        liberacoesDTO3.setNumeroLiberacao("12345");
+        liberacoesDTO3.setValorLiberacao("5000");
+        liberacoesDTO3.setCoigoLiberacao("8362196");
+        liberacoesDTOList3.add(liberacoesDTO3);
+        contratosResponseDTO3.setLiberacoes(liberacoesDTOList3);
 
         ContratosResponseDTO contratosResponseDTO4 = new ContratosResponseDTO();
         contratosResponseDTO4.setCpfCnpj("05845898976");
@@ -51,7 +70,13 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO4.setIdContrato("32563799");
         contratosResponseDTO4.setIndex("SELIC");
         contratosResponseDTO4.setPercentual("40.00");
-        contratosResponseDTO4.setLiberacoes("8");
+        LiberacoesDTO liberacoesDTO4 = new LiberacoesDTO();
+        List<LiberacoesDTO> liberacoesDTOList4 = new ArrayList<>();
+        liberacoesDTO4.setNumeroLiberacao("12345");
+        liberacoesDTO4.setValorLiberacao("5000");
+        liberacoesDTO4.setCoigoLiberacao("8362196");
+        liberacoesDTOList4.add(liberacoesDTO4);
+        contratosResponseDTO4.setLiberacoes(liberacoesDTOList4);
 
         ContratosResponseDTO contratosResponseDTO5 = new ContratosResponseDTO();
         contratosResponseDTO5.setCpfCnpj("05845898976");
@@ -61,7 +86,13 @@ public class FiltroContratosServiceImpl implements FiltroContratosService {
         contratosResponseDTO5.setIdContrato("32563799");
         contratosResponseDTO5.setIndex("SELIC");
         contratosResponseDTO5.setPercentual("40.00");
-        contratosResponseDTO5.setLiberacoes("8");
+        LiberacoesDTO liberacoesDTO5 = new LiberacoesDTO();
+        List<LiberacoesDTO> liberacoesDTOList5 = new ArrayList<>();
+        liberacoesDTO5.setNumeroLiberacao("12345");
+        liberacoesDTO5.setValorLiberacao("5000");
+        liberacoesDTO5.setCoigoLiberacao("8362196");
+        liberacoesDTOList5.add(liberacoesDTO5);
+        contratosResponseDTO5.setLiberacoes(liberacoesDTOList5);
 
         List<ContratosResponseDTO> responseDTOList = new ArrayList<>();
         responseDTOList.add(contratosResponseDTO1);
